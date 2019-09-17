@@ -1,0 +1,21 @@
+server:
+  port: 9001
+security:
+  jwt:
+    issuer: local.tux
+    audience: api.tux
+    key-store: classpath:keystore.jks
+    key-store-password: changeit
+    key-pair-alias: server
+    key-pair-password: changeit
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      show-sql: true
+
+logging:
+  level:
+    org.springframework.security: DEBUG
